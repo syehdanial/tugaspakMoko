@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color:purple;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+</style>
+<body>
+    <div class="main" id="main1">
+        <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776</span>
+    </div>
+    <h2>Ini Konten utama</h2>
+
+    <div id="menuSamping" class="sidenav">
+        <h1 onclick="closeNav()">close</h1>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+</body>
+<script>
+        function openNav() {
+  document.getElementById("menuSamping").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("menuSamping").style.width = "0";
+}
+</script>
+</html>

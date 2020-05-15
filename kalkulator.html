@@ -1,0 +1,120 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+            .container{
+        border :3px solid black;
+        background-color: white;
+        color: black;
+        width: 300px;
+        height: 300px;
+        margin: 50px auto;
+        position: relative;
+        text-align: center;
+    }
+    .kotak1{
+        background-color: blue;
+
+    }
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+    </style>
+
+    <body>
+        <div class="main" id="main1">
+            <span onclick="openNav()">&#9776</span>
+        </div>
+        
+        <div class="container"> 
+            <h2>kalkulator Javascript</h2>
+            <div class="kotak1">
+                <input type="text" id="angka1" name="angka1"placeholder="Masukkan angka 1" > 
+           </div>
+           <div class="kotak1">
+               <p>
+                <input type="text" id="angka2" name="angka2" placeholder="Masukkan angka 2" >
+            </p>
+            </div>
+            <p>
+                <button type="button" onclick="tambah()" >Tambah</button>
+                <button type="button" onclick="kurang()">Kurang</button>
+                <button type="button" onclick="kali()">Kali</button>
+                <button type="button" onclick="bagi()">Bagi</button>
+            </p>
+            <h1 id="hasil"> Hasil </h1>
+
+        </div>
+        
+        
+    </body>
+    <script>
+        function kurang(){
+        var angka1=document.getElementById("angka1").value;
+        var angka2=document.getElementById("angka2").value;
+        var bil1=Number(angka1);
+        var bil2=Number(angka2);
+        var hasil=bil1-bil2;
+
+        document.getElementById("hasil").innerHTML=hasil;
+        }
+        function tambah(){
+        var angka1=document.getElementById("angka1").value;
+        var angka2=document.getElementById("angka2").value;
+        var bil1=Number(angka1);
+        var bil2=Number(angka2);
+        var hasil=bil1+bil2;
+
+        document.getElementById("hasil").innerHTML=hasil;
+    }
+        function kali(){
+        var angka1=document.getElementById("angka1").value;
+        var angka2=document.getElementById("angka2").value;
+        var bil1=parseFloat(angka1);
+        var bil2=parseFloat(angka2);
+        var hasil=bil1*bil2;
+
+        document.getElementById("hasil").innerHTML=hasil;
+        }    
+    
+        function bagi(){
+        var angka1=document.getElementById("angka1").value;
+        var angka2=document.getElementById("angka2").value;
+        var bil1=parseFloat(angka1);
+        var bil2=parseFloat(angka2);
+        var hasil=bil1/bil2;
+
+        document.getElementById("hasil").innerHTML=hasil;
+        }
+
+        function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+
+    </html>
